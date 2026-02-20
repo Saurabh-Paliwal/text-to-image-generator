@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Text to Avatar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ✅ Background slider -->
+<div class="bg-slider">
+  <img id="bgImage" alt="Background">
+</div>
+
+<!-- Navbar -->
+<nav>
+<h2>Imaginify</h2>
+<div>
+<a href="index.html">Home</a>
+<a href="avatar.html">Avatar</a>
+<a href="interior.html">Interior</a>
+<a href="history.html">History</a>
+</div>
+</nav>
+
+<!-- Main Section -->
+<section class="main">
+<h1>Text to Avatar Character</h1>
+<p>Create AI avatar characters from text</p>
+
+<!-- ✅ Input -->
+<input 
+  id="avatarPrompt" 
+  placeholder="Example: anime girl with blue hair, 3D style">
+
+<!-- ✅ Generate Button -->
+<button onclick="generate('avatarPrompt','avatarImg','Avatar')">
+  Generate Avatar
+</button>
+
+<!-- ✅ Loading (hidden initially) -->
+<div id="loading" style="display:none;">Generating avatar...</div>
+
+<!-- ✅ Output -->
+<div class="output">
+  <img id="avatarImg" style="max-width:100%; margin-top:20px;">
+
+  <div class="actions">
+    <button onclick="copyImage('avatarImg')">Copy</button>
+    <button onclick="downloadImage('avatarImg','avatar.png')">Download</button>
+    <button onclick="shareImage('avatarImg')">Share</button>
+  </div>
+</div>
+
+</section>
+
+<!-- Script -->
+<script src="script.js"></script>
+
+</body>
+</html>

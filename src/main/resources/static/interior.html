@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Text to Interior Design</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Background slider -->
+<div class="bg-slider">
+  <img id="bgImage" alt="Background">
+</div>
+
+<!-- Navbar -->
+<nav>
+<h2>Imaginify</h2>
+<div>
+<a href="index.html">Home</a>
+<a href="avatar.html">Avatar</a>
+<a href="interior.html">Interior</a>
+<a href="history.html">History</a>
+</div>
+</nav>
+
+<!-- Main Section -->
+<section class="main">
+
+<h1>Text to Interior Design</h1>
+<p>Design rooms using text descriptions</p>
+
+<!-- Prompt input -->
+<input
+  id="interiorPrompt"
+  placeholder="Example: modern living room with wooden floor and plants">
+
+<!-- Generate Button -->
+<button onclick="generate('interiorPrompt','interiorImg','Interior')">
+  Generate Interior
+</button>
+
+<!-- Loading -->
+<div id="loading" style="display:none; margin-top:15px;">
+  Generating design...
+</div>
+
+<!-- Output (hidden initially) -->
+<div class="output" style="display:none;">
+
+  <img id="interiorImg"
+       alt="Generated Interior"
+       style="max-width:100%; margin-top:20px; border-radius:10px;">
+
+  <div class="actions" style="margin-top:15px;">
+    <button onclick="copyImage('interiorImg')">Copy</button>
+    <button onclick="downloadImage('interiorImg','interior.png')">Download</button>
+    <button onclick="shareImage('interiorImg')">Share</button>
+  </div>
+
+</div>
+
+</section>
+
+<!-- Script -->
+<script src="script.js"></script>
+
+</body>
+</html>

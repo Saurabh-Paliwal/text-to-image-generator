@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text to Image Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background slider -->
+    <div class="bg-slider">
+        <img id="bgImage" alt="Background Image">
+    </div>
+
+    <!-- Main section -->
+    <section class="main">
+        <h1>Text to Image Generator</h1>
+        <p>Convert your imagination into visuals</p>
+
+        <!-- Prompt input -->
+        <input id="promptInput" placeholder="Enter your prompt here">
+
+        <!-- Generate button -->
+        <button onclick="generate('promptInput','resultImg','Image')">
+            Generate Image
+        </button>
+
+        <!-- Loading indicator -->
+        <div id="loading" style="display:none; margin-top:15px;">
+            Generating Image...
+        </div>
+
+        <!-- Output section (hidden initially) -->
+        <div class="output" style="display:none;">
+
+            <img id="resultImg"
+                 alt="Generated Image"
+                 style="max-width:100%; margin-top:20px; border-radius:10px;" />
+
+            <div class="actions" style="margin-top:15px;">
+                <button onclick="copyImage('resultImg')">Copy</button>
+                <button onclick="shareImage('resultImg')">Share</button>
+                <button onclick="downloadImage('resultImg','text-image.png')">
+                    Download
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Script MUST be at bottom -->
+    <script src="script.js"></script>
+
+</body>
+</html>

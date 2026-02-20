@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imaginify AI</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Background -->
+<div class="bg-slider">
+  <img id="bgImage" alt="Background">
+</div>
+
+<!-- Navbar -->
+<nav>
+<h2>Imaginify</h2>
+<div>
+<a href="index.html">Home</a>
+<a href="text-image.html">Text-Image</a>
+<a href="avatar.html">Avatar</a>
+<a href="interior.html">Interior</a>
+<a href="history.html">History</a>
+</div>
+</nav>
+
+<!-- Home Section -->
+<section class="home">
+
+<h1>AI Image Generation Platform</h1>
+<p>Create images using artificial intelligence</p>
+
+<!-- ✅ Prompt input -->
+<input id="homePrompt"
+placeholder="Describe your image..."
+style="padding:12px;width:300px;border-radius:8px;border:none">
+
+<br><br>
+
+<!-- ✅ Use SAME GENERATE FUNCTION -->
+<button onclick="generate('homePrompt','homeResult','Image')"
+style="padding:10px 25px;border-radius:8px;border:none;cursor:pointer">
+Generate Image
+</button>
+
+<!-- Loading -->
+<div id="loading" style="display:none;margin-top:10px;">
+Generating...
+</div>
+
+<!-- Result -->
+<img id="homeResult"
+style="margin-top:20px;width:300px;border-radius:10px">
+
+<!-- Feature Cards -->
+<div class="cards">
+
+<div class="card">
+<h3>🖼️ Text to Image</h3>
+<p>Convert text prompts into creative AI images.</p>
+<button onclick="location.href='text-image.html'">Try Now</button>
+</div>
+
+<div class="card">
+<h3>🧑 Avatar Generator</h3>
+<p>Create avatar characters from text description.</p>
+<button onclick="location.href='avatar.html'">Try Now</button>
+</div>
+
+<div class="card">
+<h3>🏠 Interior Designer</h3>
+<p>Generate modern room designs using text.</p>
+<button onclick="location.href='interior.html'">Try Now</button>
+</div>
+
+</div>
+
+</section>
+
+<!-- ✅ IMPORTANT: only script.js -->
+<script src="script.js"></script>
+
+</body>
+</html>
